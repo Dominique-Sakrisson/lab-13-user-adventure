@@ -1,0 +1,17 @@
+.img{
+    background-image: url('../assets/space.jpg');
+    background-size: cover;
+}
+img {
+    width: 200px;
+}
+
+.container{
+    width 80%;
+    height: 500px;
+}
+
+label {
+    display: block;
+    height: 50px;
+}
