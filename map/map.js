@@ -6,8 +6,9 @@ const ul = document.querySelector('ul');
 console.log(ul);
 
 //map container html element
-const maperz = document.querySelector('.container');
-maperz.classList.add('img');
+const map = document.querySelector('.image-container');
+
+//map.classList.add('img');
 //grab the user from local storage
 
 const user = JSON.parse(localStorage.getItem(PLAYER));
@@ -31,18 +32,18 @@ if (user.hp <= 0 || completedAllQuests){
 
 //We must build our links onto the page
 //links will have text content of id of quests
+let i = 'i';
 for (let quest of quests){
-    console.log(quests);
     const li = document.createElement('li');
     const a = document.createElement('a');
-    console.log(quest.title);
     a.textContent = quest.title;
     a.href = `../quest/index.html?id=${quest.id}`;
+    li.classList.add(i);
     li.append(a);
     ul.append(li);
+    i += 'i';
 }
 
 //links are built now we must append their node to the li node
 
 
-console.log(user);

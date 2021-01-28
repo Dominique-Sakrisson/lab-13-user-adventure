@@ -1,13 +1,16 @@
-.img{
-    background-image: url('../assets/space.jpg');
-    background-size: cover;
-}
-img {
-    width: 200px;
+
+.image-container {
+    width: 100%;
+    height: 400px; 
+    background: url('../assets/space.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .container{
-    height: 500px;
+    height: 100%;
+    width: 100%;
+    position: relative;
 }
 
 label {
@@ -16,8 +19,27 @@ label {
 }
 
 ul{
+    position: relative;
     list-style: none;
 }
+
+ul li {
+    position: absolute;
+}
+
 a{
     color: white;
+}
+
+.i {
+    left: 70%;
+    top: 200px;
+}
+.ii{
+    left: 60%;
+    top: 50px;
+}
+
+.iii{
+    top: 100px;
 }

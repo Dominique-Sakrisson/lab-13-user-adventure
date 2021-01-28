@@ -7,3 +7,6 @@ img{
 ul{
     list-style: none;
 }
+label {
+    display: block;
+}
