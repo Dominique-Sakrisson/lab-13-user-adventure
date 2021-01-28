@@ -1,11 +1,11 @@
-const monsters = {
-    id: 'monsters',
-    title: 'A Den of Monsters',
+const earth = {
+    id: 'earth',
+    title: 'Escape to Earth',
     map: {
         top: '89%',
         left: '44%'
     },
-    image: 'monsters.jpg',
+    image: 'earth.jpg',
     description: `
         You enter the quest chamber only to be confronted by a hoard of
         monsters. And they look hungry. What do you do?
@@ -43,78 +43,59 @@ const monsters = {
     }]
 };
 
-const dragon = {
-    id: 'dragon',
-    title: 'A Hairy Dragon',
+const mars = {
+    id: 'mars',
+    title: 'Million Miles to Mars',
     map: {
         top: '17%',
         left: '37%'
     },
-    image: 'dragon.jpg',
+    image: 'mars.jpg',
     audio: 'dragon.wav',
     action: 'dragon-growl.aiff',
     description: `
-        You run to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
+        Welcome to the 'Million Miles to Mars skate competition. A few things to know that are important. Mars is dry, be sure drink lots of water. ... A spacesuit..? What kind of shredder are you, of course you don't get a spacesuit. Get out of my face and go skate. Last thing, watch out for rocks!
     `,
     choices: [{
         id: 'run',
-        description: 'Get the hell out of the village',
+        description: 'Go skate the flatbar and boxes',
         result: `
-            You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 gold.
-            Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 hp damage. 
+           Due to the low gravity on Mars doing tricks that leave the ground get extra height, allowing you to pull off some crazy 1080 flips into your grinds on the rails. You set a world record for the most double flips in a single trick. However the Mars record is much higher.  
         `,
-        hp: -35,
-        gold: 15
+        hp: +0,
+        gold: 0
     }, {
         id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
+        description: 'Try the handrail, might earn you some big points!',
         result: `
-            You attempt to charge towards the dragon, who sees you approach
-            and let's loose a fireball. You wake up the next morning and the
-            village has been completely burned to the ground.
-            Oh, and you take 45 hp damage.
+            You examine the approach to the stairway. There's alot of rocks and sand.. The stairs also aren't stairs, its more like a large drop off with a handrail bridging the ascent. Your attempt ends in vain, as you attempt to ollie onto the rail you float right over it and continue in the air another 30 meters. You forgot Mars has low gravity, and your path ends you right in front of a quickly moving rover. 
         `,
-        hp: -45,
+        hp: -100,
         gold: 0
     }, {
         id: 'archer',
-        description: 'Emulate that guy from LOR who shot an arrow',
+        description: 'Sneak your way to the lounge and hang out',
         result: `
-            Inspired by the legend of Bard the Bowman, you notice a
-            stunned archer standing nearby and take their bow and quiver,
-            climb to the top of a tall tower and take aim. On the dragon's
-            next pass you steady your aim and let one fly. Amazingly,
-            you strike the dragon in the eye, piercing into the brain and
-            killing the dragon instantly. The villagers declare you their hero
-            and award you 90 gold.
+            After a awesome day of laughing and partying with the VIP's you feel spiritually replenished. You even noticed somebody lost a $20 when they got up from the couch. All in all, today was a good day. 
         `,
         hp: 0,
-        gold: 90
+        gold: 20
     }]
 };
 
-const treasure = {
-    id: 'treasure',
-    title: 'A Golden Treasure',
+const moon = {
+    id: 'moon',
+    title: 'Millenial Mooners',
     map: {
         top: '31%',
         left: '5%'
     },
     prerequisites: ['dragon', 'monsters'],
-    image: 'treasure-chests.png',
+    image: 'moon.jpg',
     audio: 'treasure-chests.wav',
     action: 'chest-opening.wav',
     description: `
-        As you enter the quest chamber you notice three chests before you.
-        Just as you start to imagine the wealth, you see a giant serpent
-        emerge from the back of the chamber. You'll need to make a run for it,
-        but you have time to open one chest before you take off. Which one 
-        do you choose?
+        For years we wondered what was on the dark side of the moon. Its been the subject of speculation and occult fiction. Well now we know that there was a pretty rad alien colony who loves to shred!
     `,
     choices: [{
         id: 'wooden',
@@ -138,9 +119,9 @@ const treasure = {
 };
 
 const quests = [
-    monsters, 
-    treasure,
-    dragon,
+    earth, 
+    moon,
+    mars,
 ];
 
 export default quests;
