@@ -1,0 +1,44 @@
+body{
+    text-align: center;
+    display: grid;
+    grid-template: 1fr  1fr 1fr/ 1fr ;
+    grid-gap: 40px;
+    justify-content: center;
+}
+img{
+    width: 400px;
+}
+ul{
+    list-style: none;
+}
+label {
+    display: block;
+}
+
+.chill {
+    text-decoration: wavy;
+}
+
+.hide{
+    display: none;
+}
+
+.btn{
+    display: block;
+    margin: 10px auto;
+
+}
+
+.left-div{
+
+    grid-row: 2 / 3;
+
+width: 100%;
+}
+.middle-div{
+
+}
+
+.right-div{
+
+}
