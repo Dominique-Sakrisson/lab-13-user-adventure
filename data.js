@@ -13,9 +13,7 @@ const earth = {
         id: 'negotiate',
         description: 'Hit up the shoreline',
         result: `
-            Knowing the monsters are not too bright, you offer to go buy them all
-            turkey dinners from the village pub. They give you 35 cash money for meals
-            that will never be delivered. I hope you can live with yourself. 
+            What's better than a day soaking up rays and sand between your toes? You and a few other shredders play a game of skate, each putting up 5 cash money, you win and walk away with the 35 cash money pot!. 
         `,
         hp: 0,
         cash: 35
@@ -23,10 +21,7 @@ const earth = {
         id: 'fight',
         description: 'Skate around town',
         result: `
-            Brandishing your sword you let out a warrior's cry and charge into the monsters
-            hacking and slashing. Before long you stand panting gazing across the bodies of
-            your vanquished foes. The bad news is you take 30 hp damage. The good news is you
-            find 50 cash.
+            At one point during your ride about town you are attacked by a security guard. He was out of line, so you sue and end up winning. You loss 30 hype points and gain 50 cash money!
         `,
         hp: -30,
         cash: 50
@@ -34,8 +29,7 @@ const earth = {
         id: 'run',
         description: 'Whatever else, You, do you',
         result: `
-            As you make a dash for the door a giant spider descends and take a bite of flesh,
-            causing 50 hp damage.
+            Since you ended up playing video games all day your back sort of hurts from lack of activity. You lose 50 hype points!.
         `,
         hp: -50,
         cash: 0
@@ -120,11 +114,6 @@ const moon = {
         cash: 50,
 
     }]
-};
-
-const styles = {
-
-
 };
 
 const quests = [

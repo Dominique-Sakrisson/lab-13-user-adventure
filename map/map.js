@@ -31,9 +31,6 @@ if (completedAllQuests){
     window.location = `../win`;
 }
 
-
-
-
 //We must build our links onto the page
 //links will have text content of id of quests
 let i = 'i';
@@ -51,7 +48,3 @@ for (let quest of quests){
     i += 'i';
     
 }
-
-//links are built now we must append their node to the li node
-
-

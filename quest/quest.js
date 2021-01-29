@@ -9,7 +9,6 @@ const h2 = document.querySelector('h2');
 const form = document.querySelector('form');
 const img = document.querySelector('img');
 
-
 const p = document.querySelector('p');
 const divLeft = document.querySelector('#top-div');
 const divMiddle = document.querySelector('#middle-div');
@@ -22,8 +21,6 @@ exitButton.classList.add('btn');
 exitButton.textContent = 'Back to the map!';
 //get acces to our local storage player
 const user = JSON.parse(localStorage.getItem('PLAYER'));
-
-//
 const startingHp = user.hp;
 const startingCash = user.cash;
 //set the page image and title 
@@ -33,15 +30,12 @@ console.log(quest.description);
 p.textContent = quest.description;
 img.src = `../assets/${quest.image}`;
 
-
 //build our choices and inputs
 for (let choice of quest.choices){
     const label = document.createElement('label');
     const input = document.createElement('input');
     const span = document.createElement('span');
-
     label.textContent = choice.description;
-    
     input.type = 'radio';
     input.value = choice.id;
     input.name = 'selection';
@@ -52,21 +46,16 @@ for (let choice of quest.choices){
 const button = document.createElement('button');
 button.textContent = 'Submit action choice';
 form.appendChild(button);
-
-
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
-   
     //get form data
     const formData = new FormData(form);
     const selectionId = formData.get('selection');
     const choice = findById(quest.choices, selectionId);
     //const user = JSON.parse(localStorage.getItem('PLAYER'));
-
     if (!selectionId){
         alert('Please select a task');
     }
-    
     user.hp += choice.hp;
     user.cash += choice.cash;
     user.completed[questId] = true;
@@ -79,7 +68,6 @@ form.addEventListener('submit', (e) =>{
     const stringyUser = JSON.stringify(user);
     localStorage.setItem('PLAYER', stringyUser);
     applyHideclass();
-    console.log(divLeft);
     addEndElements(divLeft);    
 });
 
