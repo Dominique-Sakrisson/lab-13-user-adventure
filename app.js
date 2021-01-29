@@ -17,7 +17,7 @@ form.addEventListener('submit', (e) => {
         name:formData.get('name'),
         character: formData.get('character'),
         hp: 35, //change this to hype factor
-        gold: 0, //change this to winnings
+        cash: 0, //change this to winnings
         completed: {},
     };
 
@@ -26,8 +26,9 @@ form.addEventListener('submit', (e) => {
     localStorage.setItem('PLAYER', playerString);
 
     //redirect user to maps for the next step
-    window.location = './map';
-
+    if (player.character){
+        window.location = './map';
+    }
 }); 
 
 const button = document.createElement('button');

@@ -22,12 +22,16 @@ for (let quest of quests){
     //if one of the completed is not true, set completedAllQuests to false
     if (!user.completed[quest.id]){
         completedAllQuests = false;
-    } 
+    } else if (user.hp <= 0){
+        window.location = `../lose`;
+    }
+    
+}
+if (completedAllQuests){
+    window.location = `../win`;
 }
 
-if (user.hp <= 0 || completedAllQuests){
-    window.location = '.../results';
-}
+
 
 
 //We must build our links onto the page
@@ -36,12 +40,16 @@ let i = 'i';
 for (let quest of quests){
     const li = document.createElement('li');
     const a = document.createElement('a');
+    if (user.completed[quest.id]){
+        a.classList.add('hide');
+    }
     a.textContent = quest.title;
     a.href = `../quest/index.html?id=${quest.id}`;
     li.classList.add(i);
     li.append(a);
     ul.append(li);
     i += 'i';
+    
 }
 
 //links are built now we must append their node to the li node

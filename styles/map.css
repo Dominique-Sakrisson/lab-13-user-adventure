@@ -29,6 +29,7 @@ ul li {
 
 a{
     color: white;
+    font-size: 1.4rem;
 }
 
 .i {
@@ -42,4 +43,8 @@ a{
 
 .iii{
     top: 100px;
+}
+
+.hide{
+    display:none;
 }
